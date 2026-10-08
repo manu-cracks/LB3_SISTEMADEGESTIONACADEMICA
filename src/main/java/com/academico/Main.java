@@ -1,11 +1,11 @@
 package com.academico;
-import com.academico.infrastructure.EstudianteRepositoryJson;
-import com.academico.presentation.EstudianteUI;
-//agregar
+import java.util.Scanner;
+
 import com.academico.application.EstudianteService;
 import com.academico.domain.repository.EstudianteRepository;
-
-import  java.util.Scanner;
+import com.academico.infrastructure.EstudianteRepositoryJson;
+import com.academico.presentation.CursoUI;
+import  com.academico.presentation.EstudianteUI;
 
 public class Main {
 
@@ -42,7 +42,7 @@ public class Main {
                     break;
 
                 case 2:
-                   // CursoUI.mostrarMenu(sc);
+                    CursoUI.mostrarMenu(sc);
                     break;
 
                 case 0:
