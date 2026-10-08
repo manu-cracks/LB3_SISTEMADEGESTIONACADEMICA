@@ -1,6 +1,6 @@
 package com.academico.application;
 import com.academico.domain.model.Estudiante;
-//import com.academico.infrastructure.persistence.EstudianteRepositoryJson;
+//import com.academico.infrastructure.EstudianteRepositoryJson;
 import com.academico.domain.repository.EstudianteRepository;
 
 

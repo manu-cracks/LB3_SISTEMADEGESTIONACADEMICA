@@ -1,4 +1,4 @@
-package com.academico.infrastructure.persistence;
+package com.academico.infrastructure;
 import com.academico.domain.model.Estudiante;
 //agregar
 import com.academico.domain.repository.EstudianteRepository;
