@@ -15,11 +15,18 @@ public class EstudianteService {
     //Esto se llama inyección de dependencias.
 
 
-    public void registrar (Estudiante estudiante){
+    public boolean registrar (Estudiante estudiante){
         List<Estudiante> estudiantes = repository.listar();
+
+        for (Estudiante estudianteExistente : estudiantes) {
+            if (estudianteExistente.getId() == estudiante.getId()) {
+                return false;
+            }
+        }
+
         estudiantes.add(estudiante);
         repository.guardar(estudiantes);
-
+        return true;
     }
 
     public List<Estudiante> listar(){

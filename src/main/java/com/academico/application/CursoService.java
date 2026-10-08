@@ -13,13 +13,20 @@ public class CursoService {
         repository = new CursoRepository();
     }
 
-    public void registrar(Curso curso) {
+    public boolean registrar(Curso curso) {
 
         List<Curso> cursos = repository.listar();
+
+        for (Curso cursoExistente : cursos) {
+            if (cursoExistente.getId() == curso.getId()) {
+                return false;
+            }
+        }
 
         cursos.add(curso);
 
         repository.guardar(cursos);
+        return true;
     }
 
     public List<Curso> listar() {

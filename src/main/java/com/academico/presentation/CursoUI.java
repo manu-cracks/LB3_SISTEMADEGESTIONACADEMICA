@@ -27,8 +27,8 @@ public class CursoUI {
                     String nombre = sc.nextLine();
                     System.out.print("creditos: ");
                     int creditos = sc.nextInt();
-                    service.registrar(new Curso(id, nombre, creditos));
-                    System.out.println("Curso registrado");
+                    boolean registrado = service.registrar(new Curso(id, nombre, creditos));
+                    System.out.println(registrado ? "Curso registrado" : "El ID ya existe");
                     break;
                 case 2:
                     for (Curso curso : service.listar()) {

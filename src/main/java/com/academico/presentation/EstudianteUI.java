@@ -62,9 +62,13 @@ public class EstudianteUI {
 
         Estudiante estudiante =
                 new Estudiante(id, nombre, correo);
-        service.registrar(estudiante);
+        boolean registrado = service.registrar(estudiante);
 
-        System.out.println("Estudiante registrado.");
+        System.out.println(
+            registrado
+                ? "Estudiante registrado."
+                : "El ID ya existe."
+        );
 
     }
     private void listar(){
